@@ -6,6 +6,7 @@ import org.apache.thrift.protocol.TBinaryProtocol;
 import org.apache.thrift.protocol.TProtocol;
 import org.apache.thrift.transport.TFramedTransport;
 import org.apache.thrift.transport.TSocket;
+import org.apache.thrift.transport.TTransport;
 
 @Slf4j
 public class NonblockingClient {
@@ -13,10 +14,11 @@ public class NonblockingClient {
     public static void main(String[] args) throws InterruptedException {
 
         try {
-            TFramedTransport transport = new TFramedTransport(new TSocket("localhost", 9090));
-            transport.open();
+            TTransport transport  = new TSocket("localhost", 9090);
+            TFramedTransport framedTransport = new TFramedTransport(transport);
+            framedTransport.open();
 
-            TProtocol protocol = new TBinaryProtocol(transport);
+            TProtocol protocol = new TBinaryProtocol(framedTransport);
 
             HelloService.Client client = new HelloService.Client(protocol);
 
@@ -29,6 +31,5 @@ public class NonblockingClient {
         } catch (TException e) {
             e.printStackTrace();
         }
-
     }
 }

@@ -17,7 +17,11 @@ public class HelloWorldServer {
         HelloService.Processor<HelloService.Iface> helloServiceProcessor = new HelloService.Processor<>(helloService);
 
         TServerTransport serverTransport = new TServerSocket(9090);
-        TServer server = new TSimpleServer(new TServer.Args(serverTransport).processor(helloServiceProcessor));
+
+        TServer.Args serverArgs = new TServer.Args(serverTransport)
+                .processor(helloServiceProcessor);
+
+        TServer server = new TSimpleServer(serverArgs);
         server.serve();
     }
 }

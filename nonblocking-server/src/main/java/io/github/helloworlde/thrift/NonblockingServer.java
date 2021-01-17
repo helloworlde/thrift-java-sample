@@ -18,6 +18,7 @@ public class NonblockingServer {
 
         TNonblockingServerTransport transport = new TNonblockingServerSocket(9090);
 
+        // 配置参数以及处理器
         TThreadedSelectorServer.Args serverArgs = new TThreadedSelectorServer.Args(transport)
                 .selectorThreads(4)
                 .workerThreads(10)
