@@ -7,6 +7,8 @@ Thrift Java 相关功能简单使用
 |模块|功能|
 |:--|:---|
 |[HelloWorld](helloworld)| 最简单的调用|
+|[Nonblocking Server](nonblocking-server)| 服务端非阻塞调用|
+|[Async Client](async)| 客户端异步调用|
 
 ## 参考文档
 
