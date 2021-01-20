@@ -9,6 +9,11 @@ Thrift Java 相关功能简单使用
 |[HelloWorld](helloworld)| 最简单的调用|
 |[Nonblocking Server](nonblocking-server)| 服务端非阻塞调用|
 |[Async Client](async)| 客户端异步调用|
+|[Oneway](oneway)| 单向调用，不等待结果|
+|[SSL](ssl)| 使用 SSL 加密通讯|
+|[Http Transport]()| 基于 HTTP 的 Transport|
+|[Servlet Transport]()| 基于 Servlet 的 Transport|
+|[Generic]()| 泛化调用|
 
 ## 参考文档
 
