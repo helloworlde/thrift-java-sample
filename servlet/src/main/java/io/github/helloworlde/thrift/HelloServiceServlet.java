@@ -5,23 +5,15 @@ import org.apache.thrift.TException;
 import org.apache.thrift.protocol.TJSONProtocol;
 import org.apache.thrift.server.TServlet;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
 @WebServlet(urlPatterns = "/hello")
 @Slf4j
 public class HelloServiceServlet extends TServlet {
 
     public HelloServiceServlet() {
+        // 这里的协议要和 Client 端一致
         super(new HelloService.Processor<>(new HelloServiceImpl()), new TJSONProtocol.Factory());
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        super.doPost(request, response);
     }
 }
 

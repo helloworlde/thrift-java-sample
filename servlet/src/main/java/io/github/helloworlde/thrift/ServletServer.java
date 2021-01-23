@@ -28,6 +28,5 @@ public class ServletServer {
         } catch (Throwable e) {
             log.error("Start server failed: {}", e.getMessage(), e);
         }
-
     }
 }

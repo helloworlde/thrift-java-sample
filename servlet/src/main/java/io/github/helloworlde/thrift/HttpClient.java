@@ -13,6 +13,7 @@ public class HttpClient {
 
         try {
             THttpClient transport = new THttpClient("http://localhost:8080/hello");
+            // 这里的协议要和 Server 端一致
             TProtocol protocol = new TJSONProtocol(transport);
 
             HelloService.Client client = new HelloService.Client(protocol);
