@@ -183,7 +183,11 @@ Body `[1,"sayHello",1,1,{"1":{"rec":{"1":{"str":"Servlet"}}}}]` 中的值含义�
                 - `str`: 表示 `message` 这个属性是 `string` 类型
                 - `Servlet`: 表示请求的 `message` 的实际值 
 
-返回的响应 `[1,"sayHello",2,1,{"0":{"rec":{"1":{"str":"Hello Servlet"}}}}]` 类似：
+#### 响应 Body
+
+响应 Body 的相关写入实现参考 [org.apache.thrift.protocol.TJSONProtocol#writeMessageBegin](https://github.com/apache/thrift/blob/077b5fce825e79d84592fff893639b92b637eec7/lib/java/src/org/apache/thrift/protocol/TJSONProtocol.java#L505)
+
+返回的响应 `[1,"sayHello",2,1,{"0":{"rec":{"1":{"str":"Hello Servlet"}}}}]` 和请求 Body 类似：
 
 - `1`: 代表 `VERSION`
 - `sayHello`: 被调用的方法名称
