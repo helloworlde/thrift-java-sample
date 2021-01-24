@@ -13,6 +13,7 @@ Thrift Java 相关功能简单使用
 |[Oneway](event-handler)| Server 端事件监听|
 |[SSL](ssl)| 使用 SSL 加密通讯|
 |[Servlet Transport](servlet)| 基于 Servlet 的 Transport，可以使用 HTTP 直接访问|
+|[Multiple](multiple)| 多路服用的 Server，同一个 Server 有多个服务|
 |[Generic]()| 泛化调用|
 
 ## 参考文档
