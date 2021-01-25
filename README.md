@@ -8,12 +8,13 @@ Thrift Java 相关功能简单使用
 |:--|:---|
 |[HelloWorld](helloworld)| 最简单的调用|
 |[Nonblocking Server](nonblocking-server)| 服务端非阻塞调用|
-|[Async Client](async)| 客户端异步调用|
+|[Async Client](async-client)| 客户端异步调用|
+|[Async Server](async-server)| 服务端异步处理|
 |[Oneway](oneway)| 单向调用，不等待结果|
 |[Oneway](event-handler)| Server 端事件监听|
 |[SSL](ssl)| 使用 SSL 加密通讯|
 |[Servlet Transport](servlet)| 基于 Servlet 的 Transport，可以使用 HTTP 直接访问|
-|[Multiple](multiple)| 多路服用的 Server，同一个 Server 有多个服务|
+|[Multiple Processor](multiple-processor)| 多路服用的 Server，同一个 Server 有多个服务|
 |[Generic]()| 泛化调用|
 
 ## 参考文档
