@@ -1,8 +1,8 @@
-# Thrift 中使用非阻塞调用
+# Thrift 中使用异步的 Client
 
-参考 [Nonblocking Server](../nonblocking-server), 使用非阻塞的 Client 和 Server
+参考 [Nonblocking Server](../nonblocking-server), 使用异步的 Client
 
-## 实现 Server 端
+## Server 端
 
 - 使用非阻塞的 Server
 
@@ -37,7 +37,7 @@ public class NonblockingServer {
 }
 ```
 
-## 实现 Client 端
+## Client 端
 
 客户端使用 `TNonblockingSocket`，响应结果通过异步回调触发
 

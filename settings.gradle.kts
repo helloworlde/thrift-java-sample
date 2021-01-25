@@ -2,7 +2,7 @@ rootProject.name = "thrift-java-sample"
 
 include("helloworld")
 include("nonblocking-server")
-include("async")
+include("async-client")
 include("async-server")
 include("oneway")
 include("event-handler")
